@@ -61,6 +61,12 @@ export function WaitlistForm() {
 
       if (error) {
         console.error('Supabase error:', error)
+
+        // Handle duplicate email error
+        if (error.message.includes('unique_email') || error.message.includes('duplicate')) {
+          throw new Error('You gash me! 😄 You\'re already in the revolution. Check your email for updates!')
+        }
+
         throw new Error(error.message)
       }
 
