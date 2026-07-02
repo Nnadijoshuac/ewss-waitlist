@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* Right Side Image - Tap (3x smaller than tank) */}
-      <div className="absolute right-0 top-[70%] -translate-y-1/2 pointer-events-none hidden lg:flex items-center justify-center">
+      <div className="absolute right-[30%] top-[70%] -translate-y-1/2 pointer-events-none hidden lg:flex items-center justify-center">
         <Image
           src={`/tap.png?t=${Date.now()}`}
           alt=""
