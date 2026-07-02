@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <main className="min-h-screen relative flex items-center justify-center p-4 bg-[#F5F1EE]">
       {/* Left Side Image - Tank (Desktop: large, Mobile: small) */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none flex lg:hidden items-center justify-center w-20 h-20">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none flex lg:hidden items-center justify-center w-16 h-16">
         <Image
           src={`/tank.png?t=${Date.now()}`}
           alt=""
-          width={140}
-          height={140}
+          width={100}
+          height={100}
           className="object-contain"
         />
       </div>
