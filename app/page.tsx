@@ -3,7 +3,7 @@ import { WaitlistForm } from './components/WaitlistForm'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50 flex items-center justify-center p-4">
+    <main className="min-h-screen flex items-center justify-center p-4" style={{ backgroundColor: '#F5F1EE' }}>
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-12">
@@ -27,7 +27,7 @@ export default function Home() {
 
         {/* Illustration */}
         <div className="mb-12 flex justify-center">
-          <div className="relative w-full max-w-xs aspect-square bg-gradient-to-b from-gray-100 to-gray-50 rounded-3xl flex items-center justify-center overflow-hidden">
+          <div className="relative w-full max-w-xs aspect-square rounded-3xl flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#FFFFFF' }}>
             <div className="relative w-full h-full flex items-center justify-center gap-4 p-8">
               {/* Tank Image */}
               <div className="relative w-1/2 h-full flex items-center justify-center">
