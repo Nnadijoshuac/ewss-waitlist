@@ -8,13 +8,13 @@ export default function Home() {
       <div className="relative w-full flex items-end justify-center gap-2 lg:gap-8">
 
         {/* Left Side Image - Tank (responsive height = form height) */}
-        <div className="absolute left-0 bottom-0 pointer-events-none hidden lg:block w-1/4">
+        <div className="absolute left-0 bottom-0 pointer-events-none hidden lg:block h-full">
           <Image
             src={`/tank.png?t=${Date.now()}`}
             alt=""
-            width={800}
-            height={800}
-            className="object-contain w-full h-auto"
+            width={1000}
+            height={1000}
+            className="object-contain h-full w-auto"
           />
         </div>
 
