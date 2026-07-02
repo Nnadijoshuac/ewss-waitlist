@@ -4,7 +4,17 @@ import { WaitlistForm } from './components/WaitlistForm'
 export default function Home() {
   return (
     <main className="min-h-screen relative flex items-center justify-center p-4 bg-[#F5F1EE]">
-      {/* Left Side Image - Tank (left-aligned) */}
+      {/* Left Side Image - Tank (Desktop: large, Mobile: small) */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none flex lg:hidden items-center justify-center w-24 h-24">
+        <Image
+          src={`/tank.png?t=${Date.now()}`}
+          alt=""
+          width={200}
+          height={200}
+          className="object-contain"
+        />
+      </div>
+
       <div className="absolute left-0 top-[50%] -translate-y-1/2 -translate-x-1/3 pointer-events-none hidden lg:flex items-center justify-center">
         <Image
           src={`/tank.png?t=${Date.now()}`}
@@ -15,7 +25,17 @@ export default function Home() {
         />
       </div>
 
-      {/* Right Side Image - Tap (3x smaller than tank) */}
+      {/* Right Side Image - Tap (Desktop: small, Mobile: tiny) */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 pointer-events-none flex lg:hidden items-center justify-center w-20 h-20">
+        <Image
+          src={`/tap.png?t=${Date.now()}`}
+          alt=""
+          width={120}
+          height={120}
+          className="object-contain"
+        />
+      </div>
+
       <div className="absolute right-[15%] top-[70%] -translate-y-1/2 pointer-events-none hidden lg:flex items-center justify-center">
         <Image
           src={`/tap.png?t=${Date.now()}`}
@@ -27,33 +47,33 @@ export default function Home() {
       </div>
 
       {/* Center Content */}
-      <div className="w-full max-w-md relative z-10">
+      <div className="w-full max-w-sm lg:max-w-md relative z-10">
         {/* Neumorphism Form Box */}
-        <div className="rounded-3xl p-8 md:p-10" style={{
+        <div className="rounded-2xl lg:rounded-3xl p-6 lg:p-10" style={{
           backgroundColor: '#F5F1EE',
           boxShadow: '8px 8px 16px #d4ccc5, -8px -8px 16px #ffffff'
         }}>
           {/* Header */}
-          <div className="text-center mb-10">
-            <div className="mb-6 flex justify-center">
+          <div className="text-center mb-6 lg:mb-10">
+            <div className="mb-4 lg:mb-6 flex justify-center">
               <Image
                 src={`/logo.png?t=${Date.now()}`}
                 alt="VALE Logo"
-                width={120}
-                height={60}
-                className="object-contain"
+                width={100}
+                height={50}
+                className="object-contain lg:w-[120px]"
               />
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-4xl font-bold text-black mb-4 leading-tight">
+            <h2 className="text-2xl lg:text-4xl font-bold text-black mb-3 lg:mb-4 leading-tight">
               Smarter water access.
               <br />
               Stronger communities.
             </h2>
 
             {/* Description */}
-            <p className="text-base text-gray-600 leading-relaxed">
+            <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
               Join the waitlist and be among the first to experience a better way
               to access, manage, and improve water in Enugu.
             </p>
