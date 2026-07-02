@@ -3,60 +3,56 @@ import { WaitlistForm } from './components/WaitlistForm'
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 bg-[#F5F1EE]">
-      <div className="w-full max-w-md">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-light tracking-widest text-black mb-8">
-            VALE
-          </h1>
+    <main className="min-h-screen relative flex items-center justify-center p-4 bg-[#F5F1EE] overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/4 opacity-30 pointer-events-none">
+        <Image
+          src="/tank.png"
+          alt=""
+          width={400}
+          height={400}
+          className="object-contain"
+        />
+      </div>
 
-          {/* Main Headline */}
-          <h2 className="text-5xl font-bold text-black mb-6 leading-tight">
-            Smarter water access.
-            <br />
-            Stronger communities.
-          </h2>
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-30 pointer-events-none">
+        <Image
+          src="/tap.png"
+          alt=""
+          width={400}
+          height={400}
+          className="object-contain"
+        />
+      </div>
 
-          {/* Description */}
-          <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-            Join the waitlist and be among the first to experience a better way
-            to access, manage, and improve water in Enugu.
-          </p>
-        </div>
+      {/* Center Content */}
+      <div className="w-full max-w-2xl relative z-10">
+        {/* White Content Box */}
+        <div className="bg-white rounded-3xl shadow-lg p-12 md:p-16">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-light tracking-widest text-black mb-8">
+              VALE
+            </h1>
 
-        {/* Illustration */}
-        <div className="mb-12 flex justify-center">
-          <div className="relative w-full max-w-xs aspect-square rounded-3xl flex items-center justify-center overflow-hidden bg-white">
-            <div className="relative w-full h-full flex items-center justify-center gap-4 p-8">
-              {/* Tank Image */}
-              <div className="relative w-1/2 h-full flex items-center justify-center">
-                <Image
-                  src="/tank.png"
-                  alt="Water Tank"
-                  width={200}
-                  height={200}
-                  className="object-contain"
-                />
-              </div>
+            {/* Main Headline */}
+            <h2 className="text-5xl font-bold text-black mb-6 leading-tight">
+              Smarter water access.
+              <br />
+              Stronger communities.
+            </h2>
 
-              {/* Tap Image */}
-              <div className="relative w-1/2 h-full flex items-center justify-center">
-                <Image
-                  src="/tap.png"
-                  alt="Water Tap"
-                  width={200}
-                  height={200}
-                  className="object-contain"
-                />
-              </div>
-            </div>
+            {/* Description */}
+            <p className="text-lg text-gray-600 mb-12 leading-relaxed">
+              Join the waitlist and be among the first to experience a better way
+              to access, manage, and improve water in Enugu.
+            </p>
           </div>
-        </div>
 
-        {/* Form Section */}
-        <div className="bg-white rounded-3xl shadow-lg p-8 space-y-6">
-          <WaitlistForm />
+          {/* Form Section */}
+          <div className="space-y-6">
+            <WaitlistForm />
+          </div>
         </div>
       </div>
     </main>
