@@ -9,7 +9,7 @@ import { ConfettiCelebration } from './ConfettiCelebration'
 
 const schema = z.object({
   fullName: z.string().min(2, 'Full name must be at least 2 characters'),
-  phoneNumber: z.string().regex(/^\+?[1-9]\d{1,14}$/, 'Invalid phone number'),
+  phoneNumber: z.string().regex(/^[0-9\+\-\s\(\)]{10,}$/, 'Invalid phone number'),
   email: z.string().email('Invalid email address'),
 })
 
