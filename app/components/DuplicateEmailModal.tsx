@@ -10,7 +10,7 @@ export function DuplicateEmailModal({ isOpen, email, onClose }: DuplicateEmailMo
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#F5F1EE]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
       {/* Neumorphism Modal */}
       <div
         className="w-full max-w-md rounded-3xl p-8 text-center space-y-6 animate-in fade-in scale-95 duration-300"
