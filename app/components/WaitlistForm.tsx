@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { createClient } from '@supabase/supabase-js'
+import { CongratulatiosModal } from './CongratulatiosModal'
 
 const schema = z.object({
   fullName: z.string().min(2, 'Full name must be at least 2 characters'),
@@ -18,6 +19,8 @@ export function WaitlistForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [submitMessage, setSubmitMessage] = useState('')
+  const [showCongrats, setShowCongrats] = useState(false)
+  const [successEmail, setSuccessEmail] = useState('')
 
   const {
     register,
@@ -55,6 +58,8 @@ export function WaitlistForm() {
 
       setSubmitStatus('success')
       setSubmitMessage('Successfully joined the waitlist!')
+      setSuccessEmail(data.email)
+      setShowCongrats(true)
       reset()
     } catch (error) {
       setSubmitStatus('error')
@@ -215,6 +220,13 @@ export function WaitlistForm() {
         </svg>
         We respect your privacy. No spam, ever.
       </p>
+
+      {/* Congratulations Modal */}
+      <CongratulatiosModal
+        isOpen={showCongrats}
+        email={successEmail}
+        onClose={() => setShowCongrats(false)}
+      />
     </form>
   )
 }
