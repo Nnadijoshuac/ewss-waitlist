@@ -2,4 +2,16 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
 }

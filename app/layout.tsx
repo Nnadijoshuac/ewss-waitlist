@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/vale.png",
   },
+  colorScheme: "light",
 }
 
 export default function RootLayout({
