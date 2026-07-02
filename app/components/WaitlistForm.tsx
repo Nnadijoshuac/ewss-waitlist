@@ -39,32 +39,43 @@ export function WaitlistForm() {
       const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
       const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
+      console.log('Supabase URL:', supabaseUrl ? '✓ Set' : '✗ Missing')
+      console.log('Supabase Key:', supabaseKey ? '✓ Set' : '✗ Missing')
+
       if (!supabaseUrl || !supabaseKey) {
-        throw new Error('Supabase configuration missing')
+        throw new Error('Supabase credentials not configured. Check .env.local')
       }
 
       const supabase = createClient(supabaseUrl, supabaseKey)
 
-      const { error } = await supabase.from('waitlist').insert([
+      console.log('Submitting data:', data)
+
+      const { data: insertedData, error } = await supabase.from('waitlist').insert([
         {
           full_name: data.fullName,
           phone_number: data.phoneNumber,
           email: data.email,
-          created_at: new Date(),
         },
       ])
 
-      if (error) throw error
+      console.log('Insert response:', { insertedData, error })
 
+      if (error) {
+        console.error('Supabase error:', error)
+        throw new Error(error.message)
+      }
+
+      console.log('Success!')
       setSubmitStatus('success')
       setSubmitMessage('Successfully joined the waitlist!')
       setSuccessEmail(data.email)
       setShowCongrats(true)
       reset()
     } catch (error) {
+      console.error('Form submission error:', error)
       setSubmitStatus('error')
       setSubmitMessage(
-        error instanceof Error ? error.message : 'Failed to join waitlist'
+        error instanceof Error ? error.message : 'Failed to join waitlist. Check console for details.'
       )
     } finally {
       setIsSubmitting(false)
