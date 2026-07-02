@@ -3,11 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   turbopack: false,
   images: {
-    localPatterns: [
-      {
-        pathname: '/.*',
-      },
-    ],
+    unoptimized: true,
   },
 }
 
