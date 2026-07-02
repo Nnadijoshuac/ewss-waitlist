@@ -3,20 +3,20 @@ import { WaitlistForm } from './components/WaitlistForm'
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative flex items-center justify-center p-4 bg-[#F5F1EE] overflow-hidden">
-      {/* Left Side Image - Tank (1.5x bigger) */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1/3 pointer-events-none hidden lg:flex items-center justify-center">
+    <main className="min-h-screen relative flex items-center justify-center p-4 bg-[#F5F1EE]">
+      {/* Left Side Image - Tank (2x bigger, 1/3 outside frame) */}
+      <div className="absolute left-0 top-3/4 -translate-y-1/2 pointer-events-none hidden lg:flex items-center justify-center">
         <Image
           src={`/tank.png?t=${Date.now()}`}
           alt=""
-          width={1500}
-          height={1500}
+          width={3000}
+          height={3000}
           className="object-contain"
         />
       </div>
 
       {/* Right Side Image - Tap (3x smaller than tank) */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 pointer-events-none hidden lg:flex items-center justify-center">
+      <div className="absolute right-0 top-3/4 -translate-y-1/2 pointer-events-none hidden lg:flex items-center justify-center">
         <Image
           src={`/tap.png?t=${Date.now()}`}
           alt=""
