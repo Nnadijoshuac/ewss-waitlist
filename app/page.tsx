@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <main className="min-h-screen relative flex items-center justify-center p-4 bg-[#F5F1EE]">
       {/* Left Side Image - Tank (Desktop: large, Mobile: small) */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none flex lg:hidden items-center justify-center w-24 h-24">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none flex lg:hidden items-center justify-center w-20 h-20">
         <Image
           src={`/tank.png?t=${Date.now()}`}
           alt=""
-          width={200}
-          height={200}
+          width={140}
+          height={140}
           className="object-contain"
         />
       </div>
@@ -47,7 +47,7 @@ export default function Home() {
       </div>
 
       {/* Center Content */}
-      <div className="w-full max-w-xs lg:max-w-md relative z-10">
+      <div className="w-full max-w-[280px] lg:max-w-md relative z-10">
         {/* Neumorphism Form Box */}
         <div className="rounded-2xl lg:rounded-3xl p-5 lg:p-8" style={{
           backgroundColor: '#F5F1EE',
