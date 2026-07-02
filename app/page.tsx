@@ -15,7 +15,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute left-0 top-[50%] -translate-y-1/2 -translate-x-1/3 pointer-events-none hidden lg:flex items-center justify-center">
+      <div className="absolute left-0 top-[50%] -translate-y-1/2 -translate-x-1/2 pointer-events-none hidden lg:flex items-center justify-center">
         <Image
           src={`/tank.png?t=${Date.now()}`}
           alt=""
@@ -36,7 +36,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute right-[15%] top-[70%] -translate-y-1/2 pointer-events-none hidden lg:flex items-center justify-center">
+      <div className="absolute right-[5%] top-[70%] -translate-y-1/2 pointer-events-none hidden lg:flex items-center justify-center">
         <Image
           src={`/tap.png?t=${Date.now()}`}
           alt=""
