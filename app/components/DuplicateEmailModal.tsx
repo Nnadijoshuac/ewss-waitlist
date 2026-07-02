@@ -65,12 +65,10 @@ export function DuplicateEmailModal({ isOpen, email, name, onClose }: DuplicateE
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="w-full bg-black text-white font-semibold py-2.5 px-4 rounded-2xl transition-colors text-sm"
+          className="w-full bg-black text-white font-semibold py-2.5 px-4 rounded-2xl transition-all text-sm active:scale-95"
           style={{
             boxShadow: '6px 6px 12px #d4ccc5, -6px -6px 12px #ffffff'
           }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#CC5500'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#000000'}
         >
           Got it
         </button>

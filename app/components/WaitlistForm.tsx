@@ -199,7 +199,7 @@ export function WaitlistForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-black hover:bg-gray-900 disabled:bg-gray-400 text-white font-semibold py-2 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all text-sm"
+        className="w-full bg-black disabled:bg-gray-400 text-white font-semibold py-2 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all text-sm active:scale-95"
         style={{
           boxShadow: '6px 6px 12px #d4ccc5, -6px -6px 12px #ffffff'
         }}
