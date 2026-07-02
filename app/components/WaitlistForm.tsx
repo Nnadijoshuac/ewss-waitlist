@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { createClient } from '@supabase/supabase-js'
 import { ConfettiCelebration } from './ConfettiCelebration'
+import { DuplicateEmailModal } from './DuplicateEmailModal'
 
 const schema = z.object({
   fullName: z.string().min(2, 'Full name must be at least 2 characters'),
@@ -20,6 +21,8 @@ export function WaitlistForm() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [submitMessage, setSubmitMessage] = useState('')
   const [showCongrats, setShowCongrats] = useState(false)
+  const [showDuplicate, setShowDuplicate] = useState(false)
+  const [duplicateEmail, setDuplicateEmail] = useState('')
 
   const {
     register,
@@ -64,7 +67,10 @@ export function WaitlistForm() {
 
         // Handle duplicate email error
         if (error.message.includes('unique_email') || error.message.includes('duplicate')) {
-          throw new Error('You gash me! 😄 You\'re already in the revolution. Check your email for updates!')
+          setDuplicateEmail(data.email)
+          setShowDuplicate(true)
+          setIsSubmitting(false)
+          return
         }
 
         throw new Error(error.message)
@@ -240,6 +246,13 @@ export function WaitlistForm() {
       <ConfettiCelebration
         isOpen={showCongrats}
         onComplete={() => setShowCongrats(false)}
+      />
+
+      {/* Duplicate Email Modal */}
+      <DuplicateEmailModal
+        isOpen={showDuplicate}
+        email={duplicateEmail}
+        onClose={() => setShowDuplicate(false)}
       />
     </form>
   )
