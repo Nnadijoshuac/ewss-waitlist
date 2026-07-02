@@ -67,7 +67,7 @@ export function WaitlistForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
       {/* Full Name Input */}
       <div className="relative">
         <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
@@ -89,7 +89,7 @@ export function WaitlistForm() {
           {...register('fullName')}
           type="text"
           placeholder="Full name"
-          className="w-full pl-12 pr-4 py-3 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE]"
+          className="w-full pl-10 pr-3 py-2 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE] text-sm"
           style={{
             boxShadow: errors.fullName
               ? 'inset 4px 4px 8px #d4ccc5, inset -4px -4px 8px #ffffff, 0 0 0 2px #ff6b6b'
@@ -171,14 +171,14 @@ export function WaitlistForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-black hover:bg-gray-900 disabled:bg-gray-400 text-white font-semibold py-3 px-6 rounded-2xl flex items-center justify-center gap-2 transition-all"
+        className="w-full bg-black hover:bg-gray-900 disabled:bg-gray-400 text-white font-semibold py-2 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all text-sm"
         style={{
           boxShadow: '6px 6px 12px #d4ccc5, -6px -6px 12px #ffffff'
         }}
       >
         Join Waitlist
         <svg
-          className="w-5 h-5"
+          className="w-4 h-4"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -194,20 +194,20 @@ export function WaitlistForm() {
 
       {/* Status Messages */}
       {submitStatus === 'success' && (
-        <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg text-sm">
+        <div className="bg-green-50 border border-green-200 text-green-800 px-3 py-2 rounded-lg text-xs">
           {submitMessage}
         </div>
       )}
       {submitStatus === 'error' && (
-        <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg text-sm">
+        <div className="bg-red-50 border border-red-200 text-red-800 px-3 py-2 rounded-lg text-xs">
           {submitMessage}
         </div>
       )}
 
       {/* Privacy Notice */}
-      <p className="text-center text-gray-600 text-sm flex items-center justify-center gap-2">
+      <p className="text-center text-gray-600 text-xs flex items-center justify-center gap-1">
         <svg
-          className="w-4 h-4"
+          className="w-3 h-3"
           fill="currentColor"
           viewBox="0 0 24 24"
         >

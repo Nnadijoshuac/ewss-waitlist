@@ -47,33 +47,33 @@ export default function Home() {
       </div>
 
       {/* Center Content */}
-      <div className="w-full max-w-sm lg:max-w-md relative z-10">
+      <div className="w-full max-w-xs lg:max-w-md relative z-10">
         {/* Neumorphism Form Box */}
-        <div className="rounded-2xl lg:rounded-3xl p-6 lg:p-10" style={{
+        <div className="rounded-2xl lg:rounded-3xl p-5 lg:p-8" style={{
           backgroundColor: '#F5F1EE',
           boxShadow: '8px 8px 16px #d4ccc5, -8px -8px 16px #ffffff'
         }}>
           {/* Header */}
-          <div className="text-center mb-6 lg:mb-10">
-            <div className="mb-4 lg:mb-6 flex justify-center">
+          <div className="text-center mb-5 lg:mb-8">
+            <div className="mb-3 lg:mb-5 flex justify-center">
               <Image
                 src={`/logo.png?t=${Date.now()}`}
                 alt="VALE Logo"
-                width={100}
-                height={50}
-                className="object-contain lg:w-[120px]"
+                width={80}
+                height={40}
+                className="object-contain lg:w-[100px]"
               />
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-2xl lg:text-4xl font-bold text-black mb-3 lg:mb-4 leading-tight">
+            <h2 className="text-xl lg:text-3xl font-bold text-black mb-2 lg:mb-3 leading-tight">
               Smarter water access.
               <br />
               Stronger communities.
             </h2>
 
             {/* Description */}
-            <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+            <p className="text-xs lg:text-sm text-gray-600 leading-relaxed">
               Join the waitlist and be among the first to experience a better way
               to access, manage, and improve water in Enugu.
             </p>
