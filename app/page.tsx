@@ -9,8 +9,8 @@ export default function Home() {
         <Image
           src={`/tank.png?t=${Date.now()}`}
           alt=""
-          width={2000}
-          height={2000}
+          width={1333}
+          height={1333}
           className="object-contain"
         />
       </div>
