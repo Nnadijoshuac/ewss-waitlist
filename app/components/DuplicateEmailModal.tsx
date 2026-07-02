@@ -13,10 +13,11 @@ export function DuplicateEmailModal({ isOpen, email, onClose }: DuplicateEmailMo
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
       {/* Neumorphism Modal */}
       <div
-        className="w-full max-w-md rounded-3xl p-8 text-center space-y-6 animate-in fade-in scale-95 duration-300"
+        className="w-full max-w-md p-8 text-center space-y-6 animate-in fade-in scale-95 duration-300"
         style={{
           backgroundColor: '#F5F1EE',
-          boxShadow: '8px 8px 16px #d4ccc5, -8px -8px 16px #ffffff'
+          boxShadow: '8px 8px 16px #d4ccc5, -8px -8px 16px #ffffff',
+          borderRadius: '12px 40px 12px 40px'
         }}
       >
         {/* Headline */}
