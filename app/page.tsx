@@ -5,23 +5,23 @@ export default function Home() {
   return (
     <main className="min-h-screen relative flex items-center justify-center p-4 bg-[#F5F1EE] overflow-hidden">
       {/* Left Side Image */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1/4 pointer-events-none hidden lg:block">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1/3 pointer-events-none hidden lg:flex items-center justify-center">
         <Image
           src={`/tank.png?t=${Date.now()}`}
           alt=""
-          width={500}
-          height={500}
+          width={1000}
+          height={1000}
           className="object-contain"
         />
       </div>
 
       {/* Right Side Image */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/4 pointer-events-none hidden lg:block">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 pointer-events-none hidden lg:flex items-center justify-center">
         <Image
           src={`/tap.png?t=${Date.now()}`}
           alt=""
-          width={500}
-          height={500}
+          width={1000}
+          height={1000}
           className="object-contain"
         />
       </div>
@@ -35,9 +35,15 @@ export default function Home() {
         }}>
           {/* Header */}
           <div className="text-center mb-10">
-            <h1 className="text-4xl font-light tracking-widest text-black mb-6">
-              VALE
-            </h1>
+            <div className="mb-6 flex justify-center">
+              <Image
+                src={`/logo.png?t=${Date.now()}`}
+                alt="VALE Logo"
+                width={120}
+                height={60}
+                className="object-contain"
+              />
+            </div>
 
             {/* Main Headline */}
             <h2 className="text-4xl font-bold text-black mb-4 leading-tight">
