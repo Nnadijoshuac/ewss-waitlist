@@ -23,6 +23,7 @@ export function WaitlistForm() {
   const [showCongrats, setShowCongrats] = useState(false)
   const [showDuplicate, setShowDuplicate] = useState(false)
   const [duplicateEmail, setDuplicateEmail] = useState('')
+  const [duplicateName, setDuplicateName] = useState('')
 
   const {
     register,
@@ -68,6 +69,7 @@ export function WaitlistForm() {
         // Handle duplicate email error
         if (error.message.includes('unique_email') || error.message.includes('duplicate')) {
           setDuplicateEmail(data.email)
+          setDuplicateName(data.fullName)
           setShowDuplicate(true)
           setIsSubmitting(false)
           return
@@ -252,6 +254,7 @@ export function WaitlistForm() {
       <DuplicateEmailModal
         isOpen={showDuplicate}
         email={duplicateEmail}
+        name={duplicateName}
         onClose={() => setShowDuplicate(false)}
       />
     </form>

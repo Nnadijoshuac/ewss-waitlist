@@ -3,11 +3,14 @@
 interface DuplicateEmailModalProps {
   isOpen: boolean
   email: string
+  name: string
   onClose: () => void
 }
 
-export function DuplicateEmailModal({ isOpen, email, onClose }: DuplicateEmailModalProps) {
+export function DuplicateEmailModal({ isOpen, email, name, onClose }: DuplicateEmailModalProps) {
   if (!isOpen) return null
+
+  const firstName = name.split(' ')[0]
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
@@ -22,8 +25,10 @@ export function DuplicateEmailModal({ isOpen, email, onClose }: DuplicateEmailMo
       >
         {/* Headline */}
         <div>
-          <h2 className="text-3xl font-bold text-black mb-2">I've got you</h2>
-          <p className="text-gray-600 text-sm">You're already registered</p>
+          <h2 className="text-3xl font-bold text-black mb-2">
+            I've got you <span className="block">{firstName}</span>
+          </h2>
+          <p className="text-gray-600 text-sm">You are already in</p>
         </div>
 
         {/* Email Box */}
