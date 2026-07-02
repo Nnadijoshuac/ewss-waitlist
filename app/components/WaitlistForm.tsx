@@ -89,7 +89,7 @@ export function WaitlistForm() {
           {...register('fullName')}
           type="text"
           placeholder="Full name"
-          className="w-full pl-10 pr-3 py-2 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE] text-sm"
+          className="w-full pl-10 pr-3 py-2.5 h-10 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE] text-sm"
           style={{
             boxShadow: errors.fullName
               ? 'inset 4px 4px 8px #d4ccc5, inset -4px -4px 8px #ffffff, 0 0 0 2px #ff6b6b'
@@ -103,9 +103,9 @@ export function WaitlistForm() {
 
       {/* Phone Number Input */}
       <div className="relative">
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
+        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
           <svg
-            className="w-5 h-5"
+            className="w-4 h-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -122,7 +122,7 @@ export function WaitlistForm() {
           {...register('phoneNumber')}
           type="tel"
           placeholder="Phone number"
-          className="w-full pl-12 pr-4 py-3 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE]"
+          className="w-full pl-10 pr-3 py-2.5 h-10 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE] text-sm"
           style={{
             boxShadow: errors.phoneNumber
               ? 'inset 4px 4px 8px #d4ccc5, inset -4px -4px 8px #ffffff, 0 0 0 2px #ff6b6b'
@@ -136,9 +136,9 @@ export function WaitlistForm() {
 
       {/* Email Input */}
       <div className="relative">
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
+        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
           <svg
-            className="w-5 h-5"
+            className="w-4 h-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -155,7 +155,7 @@ export function WaitlistForm() {
           {...register('email')}
           type="email"
           placeholder="Email address"
-          className="w-full pl-12 pr-4 py-3 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE]"
+          className="w-full pl-10 pr-3 py-2.5 h-10 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE] text-sm"
           style={{
             boxShadow: errors.email
               ? 'inset 4px 4px 8px #d4ccc5, inset -4px -4px 8px #ffffff, 0 0 0 2px #ff6b6b'
