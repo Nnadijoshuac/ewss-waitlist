@@ -18,18 +18,6 @@ export default function Home() {
           />
         </div>
 
-        {/* Mobile Tank - smaller on mobile */}
-        <div className="flex lg:hidden pointer-events-none">
-          <div className="w-16 h-16">
-            <Image
-              src={`/tank.png?t=${Date.now()}`}
-              alt=""
-              width={100}
-              height={100}
-              className="object-contain w-full h-full"
-            />
-          </div>
-        </div>
 
         {/* Center Content */}
         <div className="w-full max-w-[280px] lg:max-w-md relative z-10">
@@ -82,18 +70,6 @@ export default function Home() {
           />
         </div>
 
-        {/* Mobile Tap - smaller on mobile */}
-        <div className="flex lg:hidden pointer-events-none">
-          <div className="w-14 h-14">
-            <Image
-              src={`/tap.png?t=${Date.now()}`}
-              alt=""
-              width={80}
-              height={80}
-              className="object-contain w-full h-full"
-            />
-          </div>
-        </div>
       </div>
     </main>
   )
