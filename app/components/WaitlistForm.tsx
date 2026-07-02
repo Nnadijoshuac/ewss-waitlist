@@ -89,11 +89,12 @@ export function WaitlistForm() {
           {...register('fullName')}
           type="text"
           placeholder="Full name"
-          className={`w-full pl-12 pr-4 py-3 rounded-full border transition-colors focus:outline-none ${
-            errors.fullName
-              ? 'border-red-500 focus:ring-2 focus:ring-red-500'
-              : 'border-gray-200 focus:border-gray-300 focus:ring-2 focus:ring-gray-100'
-          } bg-white`}
+          className="w-full pl-12 pr-4 py-3 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE]"
+          style={{
+            boxShadow: errors.fullName
+              ? 'inset 4px 4px 8px #d4ccc5, inset -4px -4px 8px #ffffff, 0 0 0 2px #ff6b6b'
+              : 'inset 4px 4px 8px #d4ccc5, inset -4px -4px 8px #ffffff'
+          }}
         />
       </div>
       {errors.fullName && (
@@ -121,11 +122,12 @@ export function WaitlistForm() {
           {...register('phoneNumber')}
           type="tel"
           placeholder="Phone number"
-          className={`w-full pl-12 pr-4 py-3 rounded-full border transition-colors focus:outline-none ${
-            errors.phoneNumber
-              ? 'border-red-500 focus:ring-2 focus:ring-red-500'
-              : 'border-gray-200 focus:border-gray-300 focus:ring-2 focus:ring-gray-100'
-          } bg-white`}
+          className="w-full pl-12 pr-4 py-3 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE]"
+          style={{
+            boxShadow: errors.phoneNumber
+              ? 'inset 4px 4px 8px #d4ccc5, inset -4px -4px 8px #ffffff, 0 0 0 2px #ff6b6b'
+              : 'inset 4px 4px 8px #d4ccc5, inset -4px -4px 8px #ffffff'
+          }}
         />
       </div>
       {errors.phoneNumber && (
@@ -153,11 +155,12 @@ export function WaitlistForm() {
           {...register('email')}
           type="email"
           placeholder="Email address"
-          className={`w-full pl-12 pr-4 py-3 rounded-full border transition-colors focus:outline-none ${
-            errors.email
-              ? 'border-red-500 focus:ring-2 focus:ring-red-500'
-              : 'border-gray-200 focus:border-gray-300 focus:ring-2 focus:ring-gray-100'
-          } bg-white`}
+          className="w-full pl-12 pr-4 py-3 rounded-2xl border-0 transition-all focus:outline-none bg-[#F5F1EE]"
+          style={{
+            boxShadow: errors.email
+              ? 'inset 4px 4px 8px #d4ccc5, inset -4px -4px 8px #ffffff, 0 0 0 2px #ff6b6b'
+              : 'inset 4px 4px 8px #d4ccc5, inset -4px -4px 8px #ffffff'
+          }}
         />
       </div>
       {errors.email && (
@@ -168,7 +171,10 @@ export function WaitlistForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-black hover:bg-gray-900 disabled:bg-gray-400 text-white font-semibold py-3 px-6 rounded-full flex items-center justify-center gap-2 transition-colors"
+        className="w-full bg-black hover:bg-gray-900 disabled:bg-gray-400 text-white font-semibold py-3 px-6 rounded-2xl flex items-center justify-center gap-2 transition-all"
+        style={{
+          boxShadow: '6px 6px 12px #d4ccc5, -6px -6px 12px #ffffff'
+        }}
       >
         Join Waitlist
         <svg
