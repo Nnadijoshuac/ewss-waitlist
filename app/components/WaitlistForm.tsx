@@ -20,7 +20,6 @@ export function WaitlistForm() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [submitMessage, setSubmitMessage] = useState('')
   const [showCongrats, setShowCongrats] = useState(false)
-  const [successEmail, setSuccessEmail] = useState('')
 
   const {
     register,
@@ -68,7 +67,6 @@ export function WaitlistForm() {
       console.log('Success!')
       setSubmitStatus('success')
       setSubmitMessage('Successfully joined the waitlist!')
-      setSuccessEmail(data.email)
       setShowCongrats(true)
       reset()
     } catch (error) {
