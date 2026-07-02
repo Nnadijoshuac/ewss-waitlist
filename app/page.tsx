@@ -69,6 +69,7 @@ export default function Home() {
             <WaitlistForm />
           </div>
         </div>
+        </div>
 
         {/* Right Side Image - Tap (responsive height = 1/3 of form) */}
         <div className="absolute right-0 bottom-0 pointer-events-none hidden lg:block w-1/6">
