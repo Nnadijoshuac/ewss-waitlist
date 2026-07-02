@@ -4,8 +4,8 @@ import { WaitlistForm } from './components/WaitlistForm'
 export default function Home() {
   return (
     <main className="min-h-screen relative flex items-center justify-center p-4 bg-[#F5F1EE]">
-      {/* Left Side Image - Tank */}
-      <div className="absolute left-0 top-3/4 -translate-y-1/2 pointer-events-none hidden lg:flex items-center justify-center">
+      {/* Left Side Image - Tank (left-aligned) */}
+      <div className="absolute left-0 top-3/4 -translate-y-1/2 -translate-x-1/2 pointer-events-none hidden lg:flex items-center justify-center">
         <Image
           src={`/tank.png?t=${Date.now()}`}
           alt=""
