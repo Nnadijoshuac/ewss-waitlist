@@ -7,7 +7,7 @@ export default function Home() {
       {/* Background Elements */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/4 opacity-30 pointer-events-none">
         <Image
-          src="/tank.png"
+          src={`/tank.png?t=${Date.now()}`}
           alt=""
           width={400}
           height={400}
@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-30 pointer-events-none">
         <Image
-          src="/tap.png"
+          src={`/tap.png?t=${Date.now()}`}
           alt=""
           width={400}
           height={400}
