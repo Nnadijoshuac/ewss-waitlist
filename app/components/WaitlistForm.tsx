@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { createClient } from '@supabase/supabase-js'
-import { CongratulatiosModal } from './CongratulatiosModal'
+import { ConfettiCelebration } from './ConfettiCelebration'
 
 const schema = z.object({
   fullName: z.string().min(2, 'Full name must be at least 2 characters'),
@@ -221,11 +221,10 @@ export function WaitlistForm() {
         We respect your privacy. No spam, ever.
       </p>
 
-      {/* Congratulations Modal */}
-      <CongratulatiosModal
+      {/* Confetti Celebration */}
+      <ConfettiCelebration
         isOpen={showCongrats}
-        email={successEmail}
-        onClose={() => setShowCongrats(false)}
+        onComplete={() => setShowCongrats(false)}
       />
     </form>
   )
