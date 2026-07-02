@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "VALE - Smarter Water Access",
   description: "Join the waitlist and be among the first to experience a better way to access, manage, and improve water in Enugu.",
   icons: {
-    icon: "/logo.png",
+    icon: "/vale.png",
   },
 }
 

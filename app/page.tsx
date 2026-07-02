@@ -30,7 +30,7 @@ export default function Home() {
           <div className="text-center mb-5 lg:mb-8">
             <div className="mb-3 lg:mb-5 flex justify-center">
               <Image
-                src={`/logo.png?t=${Date.now()}`}
+                src={`/vale.png?t=${Date.now()}`}
                 alt="VALE Logo"
                 width={80}
                 height={40}
